@@ -26,8 +26,7 @@
 
     .wrapper {
       padding-top: 10px;
-      display: inline-flex;
-
+  	  justify-content: center;
     }
 
     .icon {
@@ -84,36 +83,50 @@
 
     .social {
       position: relative;
-      margin: 10px;
+      margin-right: 10px;
       cursor: pointer;
     }
+
+	.floatingContainer{
+  	  display: flex;
+  	  justify-content: center;
+  	  align-items: center;
+	  overflow: hidden;
+    }
+    
+    .left{
+	  float:left;
+    }
+    
+    .right{
+      overflow: hidden;
+    }
+        
   </style>
 
 </head>
 
 <body>
 
-  <body>
-
-    <!-- div class="wrapper" -->
-
-      <!-- Start email Icon -->
-      <div id="email" onclick="navigate(this.id)" class="social">
-        <span class="icon email"><i class="fa-solid fa-envelope"></i></span>
+	<div>
+      <div class="floatingContainer">
+	 	<div class="left">
+          <!-- Start email Icon -->
+          <div id="email" onclick="navigate(this.id)" class="social" >
+        	<span class="icon email"><i class="fa-solid fa-envelope"></i></span>
+          </div>
+          <!-- End email Icon -->
+     	</div>  
+        <div class="right"> 
+		  icizmarik@fit.vut.cz 
+		</div>
       </div>
-      <!-- End email Icon -->
-
-      <div> icizmarik@fit.vut.cz </div
-
-      <!-- Start linkedin Icon -->
-      <div id="linkedin" onclick="navigate(this.id)" class="social">
-        <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
-      </div>
-      <!-- End linkedin Icon -->
-    <!-- /div -->
-
-
-
+      	<!-- Start linkedin Icon -->
+      	<div id="linkedin" onclick="navigate(this.id)" class="social" >
+          <span class="icon linkedin"><i class="fab fa-linkedin"></i></span>
+      	</div>
+      	<!-- End linkedin Icon -->
+    </div>
 
     <script>
       function navigate(id) {
@@ -157,8 +170,6 @@
       }
 
     </script>
-
-
 
   </body>
 
